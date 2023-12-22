@@ -1,9 +1,9 @@
-# # python M04/04-zadania-YT.py
+# # python M04/List_of_tasks.py
 user_choise = -1
 
 tasks = []
-tasks.append("zadanie 1")
-tasks.append("zadanie 2")
+tasks.append("Task 1")
+tasks.append("Task 2")
 
 def show_tasks():
     task_index = 0
@@ -12,22 +12,21 @@ def show_tasks():
         task_index += 1
 
 def add_task():
-    task = input("Wpisz zadanie: ")
+    task = input("Write your Task: ")
     tasks.append(task)
-    print("-- zadanie zostało dodane --")
+    print("-- Task has been added --")
 
 def delete_task():
-    task_index = int(input("podaj index do usunięcia: "))
+    task_index = int(input("enter the index to be removed: "))
 
     if task_index < 0 or task_index > len(tasks) - 1:
-        print("!!! indeks nie istnieje !!! ")
+        print("!!! indeks does not exist !!! ")
         return
 
     tasks.pop(task_index)
-    print("Usunięto zadanie")
+    print("Task was deleted")
 
     # tasks.pop(task_index)
-    # print("-- Usunięte zadanie --")
 
 def save_tasks_to_file():
     try:
@@ -64,13 +63,13 @@ while user_choise != 5:
         save_tasks_to_file()
 
     print()
-    print("1.Pokaż zadanie")
-    print("2.Dodaj zadanie")
-    print("3.Usuń zadanie")
-    print("4.Zapisz zmiany do pliku")
-    print("5.Wyjdż")
+    print("1.Show the Task")
+    print("2.Add Task")
+    print("3.Delete Task")
+    print("4.Save changest to the file")
+    print("5.Leave")
 
-    user_choise = int(input("Wybierz liczbę: "))
+    user_choise = int(input("Select a number: "))
     print()
 
 
