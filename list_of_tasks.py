@@ -63,7 +63,7 @@ while user_choise != 5:
         save_tasks_to_file()
 
     print()
-    print("1.Show the Task")
+    print("1.Show Task")
     print("2.Add Task")
     print("3.Delete Task")
     print("4.Save changest to the file")
